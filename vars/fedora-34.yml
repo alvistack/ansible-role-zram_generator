@@ -16,3 +16,4 @@
 
 _yum:
   - { state: "latest", name: "zram-generator" }
+  - { state: "latest", name: "zram-generator-defaults" }

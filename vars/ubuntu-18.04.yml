@@ -15,13 +15,14 @@
 # limitations under the License.
 
 _apt_key:
-  - url: "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x7D69474E84028C5CC0C44163BCFD0B018D2658F1"
-    id: "7D69474E84028C5CC0C44163BCFD0B018D2658F1"
+  - url: "https://download.opensuse.org/repositories/home:alvistack/Debian_10/Release.key"
+    id: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
     state: "present"
 
 _apt_repository:
-  - repo: "deb https://debian.nabijaczleweli.xyz stable main"
+  - repo: "deb http://download.opensuse.org/repositories/home:/alvistack/Debian_10 /"
     state: "present"
 
 _apt:
-  - { state: "latest", name: "systemd-zram" }
+  - { state: "latest", name: "zram-generator" }
+  - { state: "latest", name: "zram-generator-defaults" }

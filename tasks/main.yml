@@ -62,7 +62,6 @@
     state: "{{ item.state | default('directory') }}"
   loop:
     - { dest: "/etc/systemd" }
-    - { dest: "/usr/lib/modules-load.d" }
 
 - name: tweak settings in ini files
   ini_file:
@@ -74,18 +73,6 @@
     mode: "0644"
   loop: "{{ zram_generator_config }}"
 
-- name: tweak modeprobe entries
-  ini_file:
-    option: "{{ item.option }}"
-    state: "{{ item.state }}"
-    path: "/usr/lib/modules-load.d/zram_generator.conf"
-    section: ""
-    mode: "0644"
-    allow_no_value: true
-  loop: "{{ zram_generator_modprobe }}"
-  notify:
-    - zram_generator | systemctl restart systemd-modules-load.service
-
 - name: prepare files
   file:
     dest: "{{ item.dest }}"
@@ -95,4 +82,3 @@
     state: "{{ item.state | default('file') }}"
   loop:
     - { dest: "/etc/systemd/zram-generator.conf" }
-    - { dest: "/usr/lib/modules-load.d/zram_generator.conf" }
