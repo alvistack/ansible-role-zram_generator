@@ -13,3 +13,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+- name: zram_generator | systemctl restart systemd-modules-load.service
+  service:
+    name: "systemd-modules-load.service"
+    state: "restarted"
+  changed_when: false
+  failed_when: false

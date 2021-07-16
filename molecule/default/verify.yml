@@ -18,11 +18,6 @@
   remote_user: root
   become: true
   tasks:
-    - name: /lib/systemd/system-generators/zram-generator --version
-      command: /lib/systemd/system-generators/zram-generator --version
-      register: result
-      changed_when: result is not succeeded
-
     - name: modprobe zram
       modprobe:
         name: "zram"
