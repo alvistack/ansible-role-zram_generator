@@ -18,7 +18,24 @@
   remote_user: root
   become: true
   tasks:
-    - name: /lib/systemd/system-generators/zram-generator --version
-      command: /lib/systemd/system-generators/zram-generator --version
+    - name: modprobe zram
+      modprobe:
+        name: "zram"
+        state: "present"
+
+    - name: systemctl start systemd-zram-setup@zram0.service
+      service:
+        name: "systemd-zram-setup@zram0.service"
+        state: "started"
+        enabled: true
+      changed_when: false
+      failed_when: false
+
+    - name: zramctl
+      shell: |
+        set -euxo pipefail
+        zramctl -n | grep /dev/zram0
+      args:
+        executable: "/bin/bash"
       register: result
       changed_when: result is not succeeded
