@@ -1,8 +1,14 @@
 # Ansible Role for zram-generator
 
-## 5.1.0 - TBC
+## 5.2.0 - TBC
 
 ### Major Changes
+
+## 5.1.0 - 2021-07-18
+
+### Major Changes
+
+  - Upgrade minimal Ansible community package support to 4.2.0
 
 ## 5.0.0 - 2021-07-08
 
