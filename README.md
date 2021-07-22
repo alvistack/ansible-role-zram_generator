@@ -13,8 +13,9 @@ Ansible Role for zram-generator Installation.
 
 ## Requirements
 
-This role require Ansible community package 4.2 or higher. This role was
-designed for:
+This role require Ansible community package 4.3 or higher.
+
+This role was designed for:
 
   - Ubuntu 18.04, 20.04, 20.10, 21.04
   - CentOS 7, 8 Stream
@@ -41,8 +42,8 @@ could simply deploy to `localhost` as below:
 ## License
 
   - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC
-    BY 4.0](http://creativecommons.org/licenses/by/4.0/)
+  - Docs released under [CC BY
+    4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
