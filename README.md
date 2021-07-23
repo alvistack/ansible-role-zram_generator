@@ -1,13 +1,9 @@
 # Ansible Role for zram-generator
 
-[![Gitlab pipeline
-status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-zram_generator/master)](https://gitlab.com/alvistack/ansible-role-zram_generator/-/pipelines)
-[![GitHub
-release](https://img.shields.io/github/release/alvistack/ansible-role-zram_generator.svg)](https://github.com/alvistack/ansible-role-zram_generator/releases)
-[![GitHub
-license](https://img.shields.io/github/license/alvistack/ansible-role-zram_generator.svg)](https://github.com/alvistack/ansible-role-zram_generator/blob/master/LICENSE)
-[![Ansible
-Role](https://img.shields.io/badge/galaxy-alvistack.zram_generator-blue.svg)](https://galaxy.ansible.com/alvistack/zram_generator)
+[![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-zram_generator/master)](https://gitlab.com/alvistack/ansible-role-zram_generator/-/pipelines)
+[![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-zram_generator.svg)](https://github.com/alvistack/ansible-role-zram_generator/releases)
+[![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-zram_generator.svg)](https://github.com/alvistack/ansible-role-zram_generator/blob/master/LICENSE)
+[![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.zram_generator-blue.svg)](https://galaxy.ansible.com/alvistack/zram_generator)
 
 Ansible Role for zram-generator Installation.
 
@@ -34,16 +30,14 @@ This role was designed for:
 
 ## Example Playbook
 
-[molecule/default/converge.yml](molecule/default/converge.yml) This role
-could simply deploy to `localhost` as below:
+[molecule/default/converge.yml](molecule/default/converge.yml) This role could simply deploy to `localhost` as below:
 
     molecule converge -s default
 
 ## License
 
   - Code released under [Apache License 2.0](LICENSE)
-  - Docs released under [CC BY
-    4.0](http://creativecommons.org/licenses/by/4.0/)
+  - Docs released under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
 
 ## Author Information
 
