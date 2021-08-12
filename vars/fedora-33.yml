@@ -15,7 +15,7 @@
 # limitations under the License.
 
 _rpm_key:
-  - key: "https://download.opensuse.org/repositories/home:/alvistack:/systemd/Fedora_33/repodata/repomd.xml.key"
+  - key: "http://download.opensuse.org/repositories/home:/alvistack:/systemd/Fedora_33/repodata/repomd.xml.key"
     fingerprint: "789CFFDE0295B8A1F4E5690C4BECC97550D0B1FD"
     state: "present"
 
@@ -23,11 +23,11 @@ _yum_repository:
   - file: "home:alvistack:systemd"
     name: "home_alvistack_systemd"
     description: "home:alvistack:systemd (Fedora_33)"
-    baseurl: "https://download.opensuse.org/repositories/home:/alvistack:/systemd/Fedora_33"
+    baseurl: "http://download.opensuse.org/repositories/home:/alvistack:/systemd/Fedora_33"
     enabled: true
     priority: "2"
     gpgcheck: true
-    gpgkey: "https://download.opensuse.org/repositories/home:/alvistack:/systemd/Fedora_33/repodata/repomd.xml.key"
+    gpgkey: "http://download.opensuse.org/repositories/home:/alvistack:/systemd/Fedora_33/repodata/repomd.xml.key"
     state: "present"
 
 _yum:
