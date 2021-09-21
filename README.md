@@ -1,5 +1,7 @@
 # Ansible Role for zram-generator
 
+<img src="/alvistack.svg" width="75" alt="AlviStack">
+
 [![Gitlab pipeline status](https://img.shields.io/gitlab/pipeline/alvistack/ansible-role-zram_generator/master)](https://gitlab.com/alvistack/ansible-role-zram_generator/-/pipelines)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-zram_generator.svg)](https://github.com/alvistack/ansible-role-zram_generator/releases)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-zram_generator.svg)](https://github.com/alvistack/ansible-role-zram_generator/blob/master/LICENSE)
