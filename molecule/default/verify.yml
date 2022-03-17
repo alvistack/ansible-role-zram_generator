@@ -24,7 +24,7 @@
         state: "present"
 
     - name: systemctl start systemd-zram-setup@zram0.service
-      service:
+      ansible.builtin.service:
         name: "systemd-zram-setup@zram0.service"
         state: "started"
         enabled: true
@@ -32,7 +32,7 @@
       failed_when: false
 
     - name: zramctl
-      shell: |
+      ansible.builtin.shell: |
         set -euxo pipefail
         zramctl -n | grep /dev/zram0
       args:

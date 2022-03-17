@@ -15,7 +15,7 @@
 # limitations under the License.
 
 - name: zram_generator | systemctl restart systemd-modules-load.service
-  service:
+  ansible.builtin.service:
     name: "systemd-modules-load.service"
     state: "restarted"
   changed_when: false
