@@ -65,7 +65,7 @@
     - { dest: "/usr/lib/modules-load.d" }
 
 - name: tweak settings in ini files
-  ini_file:
+  community.general.ini_file:
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
@@ -75,7 +75,7 @@
   loop: "{{ zram_generator_config }}"
 
 - name: tweak modeprobe entries
-  ini_file:
+  community.general.ini_file:
     option: "{{ item.option }}"
     state: "{{ item.state }}"
     path: "/usr/lib/modules-load.d/zram_generator.conf"
