@@ -33,9 +33,10 @@
       failed_when: false
 
     - name: zramctl
-      ansible.builtin.shell: |
-        set -euxo pipefail
-        zramctl -n | grep /dev/zram0
+      ansible.builtin.shell:
+        cmd: |
+          set -euxo pipefail
+          zramctl -n | grep /dev/zram0
       args:
         executable: "/bin/bash"
       register: result
