@@ -22,4 +22,3 @@
     - name: include role
       ansible.builtin.include_role:
         name: alvistack.zram_generator
-      tags: alvistack.zram_generator
