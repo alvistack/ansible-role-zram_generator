@@ -15,7 +15,5 @@
 # limitations under the License.
 
 _rpm_key: []
-
 _yum_repository: []
-
 _yum: []

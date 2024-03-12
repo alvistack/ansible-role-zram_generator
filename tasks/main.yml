@@ -1,5 +1,4 @@
 ---
-
 # Copyright 2024 Wong Hoi Sing Edison <hswong3i@pantarei-design.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +14,7 @@
 # limitations under the License.
 
 - name: include default variables
-  ansible.builtin.include_vars: "../vars/main.yml"
+  ansible.builtin.include_vars: ../vars/main.yml
 
 - name: include release specific variables
   ansible.builtin.include_vars: "{{ _loop_var }}"
@@ -32,7 +31,7 @@
         - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
       paths:
-        - "../vars"
+        - ../vars
       skip: true
 
 - name: include release specific tasks
@@ -50,7 +49,7 @@
         - "{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
         - "{{ ansible_os_family | lower }}.yml"
       paths:
-        - "."
+        - .
       skip: true
 
 - name: prepare directories
@@ -61,8 +60,8 @@
     mode: "{{ item.mode | default('0755') }}"
     state: "{{ item.state | default('directory') }}"
   loop:
-    - { dest: "/etc/systemd" }
-    - { dest: "/usr/lib/modules-load.d" }
+    - { dest: /etc/systemd }
+    - { dest: /usr/lib/modules-load.d }
 
 - name: tweak settings in ini files
   community.general.ini_file:
@@ -70,7 +69,7 @@
     option: "{{ item.option }}"
     value: "{{ item.value }}"
     state: "{{ item.state }}"
-    path: "/etc/systemd/zram-generator.conf"
+    path: /etc/systemd/zram-generator.conf
     mode: "0644"
   loop: "{{ zram_generator_config }}"
 
@@ -78,7 +77,7 @@
   community.general.ini_file:
     option: "{{ item.option }}"
     state: "{{ item.state }}"
-    path: "/usr/lib/modules-load.d/zram_generator.conf"
+    path: /usr/lib/modules-load.d/zram_generator.conf
     section: ""
     mode: "0644"
     allow_no_value: true
@@ -94,5 +93,5 @@
     mode: "{{ item.mode | default('0644') }}"
     state: "{{ item.state | default('file') }}"
   loop:
-    - { dest: "/etc/systemd/zram-generator.conf" }
-    - { dest: "/usr/lib/modules-load.d/zram_generator.conf" }
+    - { dest: /etc/systemd/zram-generator.conf }
+    - { dest: /usr/lib/modules-load.d/zram_generator.conf }
