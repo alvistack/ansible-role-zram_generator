@@ -16,8 +16,8 @@
 
 # zram-generator configs.
 zram_generator_config:
-  - { state: present, section: zram0, option: max-zram-size, value: "8192" }
-  - { state: present, section: zram0, option: zram-fraction, value: "1.0" }
+  - { state: present, section: zram0, option: zram-size, value: "min(ram / 2, 8192)" }
+  - { state: present, section: zram0, option: compression-algorithm, value: "lzo-rle zstd(level=3) (type=idle)" }
 
 # Kernel modules.
 zram_generator_modprobe:
